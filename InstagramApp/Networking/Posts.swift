@@ -18,17 +18,19 @@ extension Networking
         let ref = Firestore.firestore().collection("posts")
         
         ref.getDocuments { (documents, error) in
-            
-            if let documents = documents {
-                
-                for document in documents.documents
-                {
-                    let model = try! FirestoreDecoder().decode(Post.self, from: document.data())
-                    print("Model: \(model)")
-                }
-            } else {
-                print("Document does not exist")
-            }
+            guard let documents = documents else {return}
+                /// Made this one liner using ```map```
+                let posts = try! FirebaseDecoder().decode([Post].self, from: documents.documents.map{$0.data()})
+                print("🎉All posts:\n", posts)
+                /// The following using for loop
+//                for document in documents.documents
+//                {
+//                    let model = try! FirestoreDecoder().decode(Post.self, from: document.data())
+//                    print("Model: \(model)")
+//                }
+//            } else {
+//                print("Document does not exist")
+//            }
 //            guard error == nil else {
 //                return
 //            }
