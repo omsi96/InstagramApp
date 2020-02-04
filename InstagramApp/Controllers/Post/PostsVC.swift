@@ -18,7 +18,7 @@ class PostsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! PostCell
         
         
-        cell.postImageView.image = UIImage(named: posts[indexPath.row].imageName)
+        cell.postImageView.image = #imageLiteral(resourceName: "post2")
         
         
         return cell
