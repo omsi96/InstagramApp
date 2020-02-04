@@ -106,9 +106,9 @@
 		D204FA4B23E877AB007A0C66 /* InstagramApp */ = {
 			isa = PBXGroup;
 			children = (
+				D204FA6823E880C5007A0C66 /* Storyboards */,
 				D204FA7623E88727007A0C66 /* Helpers */,
 				D204FA6923E880E3007A0C66 /* Networking */,
-				D204FA6823E880C5007A0C66 /* Storyboards */,
 				D204FA6723E880A5007A0C66 /* Models */,
 				D204FA6623E88094007A0C66 /* Controllers */,
 				D204FA6223E87D77007A0C66 /* GoogleService-Info.plist */,
